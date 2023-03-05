@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUOI1(JS)</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <button onclick="tuoi()">Tuoi</button>
+    <button onclick="khoaHoc()">Khoa hoc</button>
+    <p id="result"></p>
+    <script>
+        // //CAU 2 A
+        // let arr1 = [0, 2, 4, 6, 8].filter(x => x > 3);
+        // let arr2 = [1, 3, 5, 7].filter(x => x > 3);
+        //  alert(arr1);
+        //  alert(arr2);
+        // //CAU 2 B
+        // let arr4 = [1,3,5,7].slice(1);
+        // arr4.unshift(2);
+        // let arr3 = [0,2,4,6,8].concat(arr4);
+        //  alert(arr3);
+        // //CAU 2 C
+        // let arr5 = [0,2,4,6,8];
+        // let arr6 = [1,3,5,7];
+        // let arr = arr5.concat(arr6);
+        // arr.sort();
+        //  alert(arr);
+    </script>
+    <script>
+        //CAU 1
+        let students = [
+            {
+                name: "NVA",
+                age: 16,
+                courses: ["mindX 01", "mindX 02", "mindX 03"]
+            },
+            {
+                name: "NVB",
+                age: 18,
+                courses: ["mindX 01", "mindX 02", "mindX 04"]
+            },
+            {
+                name: "NVC",
+                age: 17,
+                courses: ["mindX 01", "mindX 03", "mindX 04"]
+            },
+            {
+                name: "NVD",
+                age: 15,
+                courses: ["mindX 01", "mindX 02", "mindX 03"]
+            }
+        ]
+        let tuoi = () =>{
+            document.getElementById("result").innerHTML = "";
+            let age = prompt("Độ tuổi cần tìm?");
+            for ( var student of students){
+                if(student.age == age){
+                    document.getElementById("result").innerHTML += 
+                    student.name + " ";
+                }
+            }
+            if(document.getElementById("result").innerHTML == ""){   
+                    document.getElementById("result").innerHTML = "Không tìm thấy";
+            }
+        }
+        let khoaHoc = () =>{
+            document.getElementById("result").innerHTML = "";
+            let crs = prompt("Khóa học cần tìm?");
+            for (var student of students){
+                for (var course of student.courses){
+                    if(course == crs){
+                        document.getElementById("result").innerHTML +=
+                        student.name + " ";
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById("result").innerHTML == ""){   
+                    document.getElementById("result").innerHTML = "Chưa có lớp học này!";
+            }
+        }
+    </script>
+</body>
+
+</html>

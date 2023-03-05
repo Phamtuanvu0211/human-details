@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUOI4</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <form action="" method="POST" onsubmit="validate()">
+        <div class="register" style="border-radius: 50px;">
+        <h1 style="display: flex; justify-content: center; color: red;">Đăng ký</h1>
+        <p style="display: flex; justify-content: center;color: red;">Vui lòng điền thông tin để đăng ký</p>
+        <hr>
+        <label for="username"><b style="display: flex; justify-content: center;color: red;">Tên đăng nhập</b></label>
+        <input type="text" placeholder="Họ và tên" name="username"  style="border-radius: 50px;" id="username">
+        <label for="password"><b style="display: flex; justify-content: center;color: red;">Mật khẩu</b></label>
+        <input type="password" placeholder="******" name="password" id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Yêu cầu có chữ Hoa và thường và số,mật khẩu phải có ít nhất 6 chữ cái" required style="border-radius: 50px">
+        <label for="password-repeat"><b style="display: flex; justify-content: center;color: red;">Nhập lại mật khẩu</b></label>
+        <input type="password" placeholder="******" name="password-repeat" id="password-repeat"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Yêu cầu có chữ Hoa và thường và số,mật khẩu phải có ít nhất 8 chữ cái" required style="border-radius: 50px">
+        <label for="email" style="color: red;">Nhập email của bạn:</label>
+        <input type="email" id="email" name="email" required style="border-radius: 50px; color: #fb5849;">
+        <button type="submit" class="submit" style="border-radius: 50px;">Đăng ký</button>
+    </div>
+        </form>
+        <button onclick="myFunction()">dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>

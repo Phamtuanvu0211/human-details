@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTBUOI2</title>
+    <link href="index.css" rel="stylesheet" ></link>
+    <script src="index.js"></script>
+</head>
+<body>
+    <script>
+        //BT1
+        const arr1 = [1,2,4,5,6];//1,6;
+        const arr2 = [1,6,8,9,0];//1,6;
+        const arr3= [arr1,arr2].filter(x=>x==x); 
+        //alert(arr3);
+    </script>
+    <script>
+        //BT2
+        const arr =  [1,54,6,7];
+        const newARR=[...arr].map(x=>x+5);
+        //alert(newARR); 
+    </script>
+    <script>
+        //BT3
+        const m = [1,2,4,5,6,7];
+        const n = [3,5,675,8,96];
+        const v = [...m,...n].filter(x=>x!=1 && x!=10 && x!=8 && x!=96 && x!=7);
+        //alert(v);
+    </script>
+</body>
+</html>
